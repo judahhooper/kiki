@@ -5,7 +5,7 @@ from position import Position
 def parse_fen():
     print("provide FEN string: ")
     # example fen:
-    # rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+   
     fen = input()
     fields = fen.split()
     board, side, castling, en_passant, halfmove, fullmove = fields
@@ -30,24 +30,32 @@ def parse_piece_placement(board):
     
     # i'll go slow from letter, to rank + file, to square number, to bitboard. 
 
-    
+     # rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+     #8/8/8/3p4/8/8/8/8 w KQkq - 0 1
     ranks = board.split("/")
+    
+    
+    rank_number = 9
     
     for rank in ranks:
         file_number = 1
-        for char in rank:                        
+        rank_number -= 1
+        for char in rank:   
+              
             if char.isalpha():
-                
-                print("found a piece on this square")
+                print(file_number, rank_number)
                 file_number += 1
+               
+                
                 
             elif char.isdigit():
-
-                print("found some empty squares")
-                
-                empty_squares = int(char)
-                
+                print(file_number, rank_number)
+                empty_squares = int(char)  
                 file_number += empty_squares
+         
+            
+            
+            
                  
 
 parse_fen()
