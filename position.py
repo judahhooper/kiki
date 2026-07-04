@@ -4,7 +4,6 @@ class Position:
         # without self, I realised I'd be essentially updating the "blueprint"
         # rather than the specific instance - self is necessary here. 
 
-
         # Bitboards
         self.white_pawns = 0
         self.white_knights = 0
@@ -28,29 +27,35 @@ class Position:
         self.fullmove_number = 1
         
     def place_piece_on_square(self, square_number, char):
+        
+        # this is my first introduction to bitwise operators tbh
+        
+        # as i understand it, each line is basically saying:
+        # "update the existing bitboard with whatever the parser told you"
             
         match char:
             case "b":
-                print("found a black bishop")
+                self.black_bishops |= 1 << square_number
             case "n":
-                print("found a black knight")
+                self.black_knights |= 1 << square_number
             case "r":
-                print("found a black rook")
+                self.black_rooks |= 1 << square_number
             case "k":
-                print("found a black king")
+                self.black_king |= 1 << square_number
             case "q":
-                print("found a black queen")
+                self.black_queens |= 1 << square_number
             case "p":
-                print("found a black pawn")
+                self.black_pawns |= 1 << square_number
+
             case "B":
-                print("found a white bishop")
+                self.white_bishops |= 1 << square_number
             case "N":
-                print("found a white knight")
+                self.white_knights |= 1 << square_number
             case "R":
-                print("found a white rook")
+                self.white_rooks |= 1 << square_number
             case "K":
-                print("found a white king")
+                self.white_king |= 1 << square_number
             case "Q":
-                print("found a white queen")
+                self.white_queens |= 1 << square_number
             case "P":
-                print("found a white pawn")
+                self.white_pawns |= 1 << square_number
