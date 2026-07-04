@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import Position
+
 def parse_fen():
     print("provide FEN string: ")
     # example fen:
