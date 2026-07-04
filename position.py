@@ -31,7 +31,7 @@ class Position:
         # this is my first introduction to bitwise operators tbh
         
         # as i understand it, each line is basically saying:
-        # "update the existing bitboard with whatever the parser told you"
+        # "update the existing bitboard with whatever the parser told you, but don't overwrite"
             
         match char:
             case "b":

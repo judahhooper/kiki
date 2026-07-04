@@ -2,17 +2,20 @@
 
 from position import Position
 
-def parse_fen():
-    print("provide FEN string: ")
-    # example fen:
-    p = Position()
-    fen = input()
+def main ():
+    with open("example_positions.txt", "r") as file:
+        fens=file.readlines()
+    
+    for fen in fens:
+        parse_fen(fen)
+
+def parse_fen(fen):
     fields = fen.split()
     board, side, castling, en_passant, halfmove, fullmove = fields
-
+    # example fen:
+    p = Position()
     parse_piece_placement(board, p) 
-    return p
-   
+    return p 
 
 def parse_piece_placement(board, p):
 
@@ -57,6 +60,6 @@ def parse_piece_placement(board, p):
                 p.place_piece_on_square(square_number, char) 
                 file_number += empty_squares
                 
-            
+    
                 
-parse_fen()
+main()
