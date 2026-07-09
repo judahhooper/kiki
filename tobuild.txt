@@ -1,4 +1,4 @@
-Position function
+Position function - ongoing
 
 Move Generator function
 
@@ -10,4 +10,4 @@ Renderer
 
 UI
 
-FEN converter
+FEN converter - DONE

@@ -2,13 +2,6 @@
 
 from position import Position
 
-def main ():
-    with open("example_positions.txt", "r") as file:
-        fens=file.readlines()
-    
-    for fen in fens:
-        parse_fen(fen)
-
 def parse_fen(fen):
     fields = fen.split()
     board, side, castling, en_passant, halfmove, fullmove = fields
@@ -19,6 +12,7 @@ def parse_fen(fen):
     p.capture_en_passant_info(en_passant)
     p.capture_halfmove_clock_value(halfmove)
     p.capture_fullmove_clock_value(fullmove)
+    return p
 
 def parse_piece_placement(board, p):
 
@@ -62,6 +56,3 @@ def parse_piece_placement(board, p):
                 p.place_piece_on_square(square_number, char) 
                 file_number += empty_squares
                 
-    
-                
-main()

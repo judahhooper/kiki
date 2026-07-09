@@ -26,6 +26,31 @@ class Position:
         self.halfmove_clock = 0
         self.fullmove_number = 1
         
+        # aggregate masks - this really reminds me of discrete maths. 
+        
+        position.white_pieces = (
+            position.white_pawns |
+            position.white_knights |
+            position.white_bishops |
+            position.white_rooks |
+            position.white_queens |
+            position.white_king
+    )
+
+    position.black_pieces = (
+            position.black_pawns |
+            position.black_knights |
+            position.black_bishops |
+            position.black_rooks |
+            position.black_queens |
+            position.black_king
+    )
+
+    position.occupied = (
+            position.white_pieces |
+            position.black_pieces
+    )
+        
     def place_piece_on_square(self, square_number, char):
         
         # this is my first introduction to bitwise operators tbh

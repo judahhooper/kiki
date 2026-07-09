@@ -23,8 +23,8 @@ via bitboard. Additional bitboards can be cached and then recomputed depending o
 
 ##How do I refer to a square?
 
-By it's index (0-63). (x,y) correspond to (file, rank), so there's a neat trick that means that the index 
-satisfies these linear equations:
+By it's index (0-63). (x,y) correspond to (file, rank), so there's a nice trick that means that the index 
+satisfies these equations:
 
 rank = index // 8
 file = index modulo 8
@@ -62,8 +62,13 @@ If I receive a FEN string, how do I convert it into my internal representation?
 I assume someone has built a library for this. But ChatGPT recommended building a FEN parser. 
 
 Can I recreate the starting position without hardcoding every square?
+Yep 
+
 Can I verify my representation is correct by printing it?
+Yeah
+
 Given "e4", how do I find that square?
+
 Given an index, how do I know its file and rank?
 How do I know whether a square is occupied?
 How do I ask what piece is on a square?
