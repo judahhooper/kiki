@@ -16,3 +16,6 @@ def generate_moves(position):
     def generate_pl_pawn_moves():
         position.black_pawns << 8
         position.white_pawns << 8 
+        
+        ## need to go back to the dwawing board on bitwise operators and generalise that out to bitboards. 
+        ## need to understand how to apply attack maps and aggregate maps to generating moves.
