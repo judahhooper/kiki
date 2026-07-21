@@ -1,6 +1,6 @@
 ## BUILDING
 
-Position function - ongoing
+Position - ongoing
 
 Move Generator function - ongoing
 

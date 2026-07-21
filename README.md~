@@ -1,3 +1,5 @@
+## BUILDING
+
 Position function - ongoing
 
 Move Generator function - ongoing
@@ -8,6 +10,6 @@ Search function
 
 Renderer
 
-UI
+GUI - probs browser based?
 
-FEN converter - DONE
+FEN converter - ✅
