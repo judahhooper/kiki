@@ -99,3 +99,4 @@ class Position:
         
     def capture_fullmove_clock_value(self, fullmove):
         self.fullmove_number = fullmove
+        

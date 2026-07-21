@@ -3,6 +3,7 @@
 Position - ongoing
 
 Move Generator function - ongoing
+    - Attack tables, king + knight
 
 Evaluation function
 

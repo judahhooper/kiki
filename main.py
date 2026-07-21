@@ -19,4 +19,6 @@ def main():
         position = Position()
         generate_moves(position)
         
+    
+        
 main()
