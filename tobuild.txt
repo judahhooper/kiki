@@ -1,6 +1,6 @@
 Position function - ongoing
 
-Move Generator function
+Move Generator function - ongoing
 
 Evaluation function
 
